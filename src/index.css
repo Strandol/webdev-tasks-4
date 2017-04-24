@@ -1,0 +1,802 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1e5799 0%, #2cb7ea 28%, #207cca 64%, #2989d8 74%, #2989d8 74%, #7db9e8 100%);
+  padding: 0;
+  margin: 0;
+  perspective: 1000px;
+  box-sizing: border-box;
+  transform-origin: center center;
+}
+.gallery {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  text-align: center;
+}
+.gallery__vegetable {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  position: relative;
+  margin-left: -110px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 29px -5px rgba(0,0,0,0.75);
+}
+.gallery__vegetable__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 1px);
+}
+.gallery__vegetable__recipe {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin-right: 10px;
+  background: #fff;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, -1px) rotate3d(1, 0, 0, 180deg);
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.gallery__vegetable__recipe label[for*='close'] {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.gallery__vegetable__recipe label[for*='close']:hover {
+  transform: rotate(180deg);
+  background: #739bdf;
+  transition-property: transform background;
+  transition-duration: 0.5s 0.5s;
+}
+.gallery__vegetable__recipe__name {
+  color: #7b7b7b;
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+}
+.gallery__vegetable__recipe__ingredients {
+  width: 45%;
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  vertical-align: top;
+}
+.gallery__vegetable__recipe__ingredients li {
+  margin-bottom: 5px;
+}
+.gallery__vegetable__recipe__instruction {
+  list-style-position: inside;
+  text-align: left;
+  font-size: 12px;
+  width: 49%;
+  display: inline-block;
+  padding: 0;
+  vertical-align: top;
+  margin: 0;
+}
+.gallery__vegetable__recipe__instruction li {
+  margin-bottom: 5px;
+}
+.gallery__vegetable__recipe__instruction__line {
+  border: 0.5px solid #7d7878;
+}
+.gallery__vegetable__recipe__instruction__comment {
+  color: #909090;
+  margin: 0;
+  font-size: 11px;
+}
+.gallery__vegetable__recipe__instruction__header {
+  text-align: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: #d84a4a;
+}
+.gallery__vegetable__recipe hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.gallery__vegetable::first-child {
+  margin-left: 0;
+}
+.gallery__vegetable:nth-of-type(1) {
+  transform: rotate3d(0, 1, 0, 10.2deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(2) {
+  transform: rotate3d(0, 1, 0, 20.4deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(3) {
+  transform: rotate3d(0, 1, 0, 30.599999999999998deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(4) {
+  transform: rotate3d(0, 1, 0, 40.8deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(5) {
+  transform: rotate3d(0, 1, 0, 51deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(6) {
+  transform: rotate3d(0, 1, 0, 61.199999999999996deg);
+  transition-duration: 3s;
+}
+.gallery__vegetable:nth-of-type(7) {
+  transform: rotate3d(0, 1, 0, 71.39999999999999deg);
+  transition-duration: 3s;
+}
+input[type="radio"] {
+  display: none;
+}
+input[name="vegetable"]:nth-of-type(1):checked ~ .gallery label:nth-of-type(1) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(2):checked ~ .gallery label:nth-of-type(2) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(3):checked ~ .gallery label:nth-of-type(3) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(4):checked ~ .gallery label:nth-of-type(4) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(5):checked ~ .gallery label:nth-of-type(5) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(6):checked ~ .gallery label:nth-of-type(6) {
+  transform: translateZ(150px);
+}
+input[name="vegetable"]:nth-of-type(7):checked ~ .gallery label:nth-of-type(7) {
+  transform: translateZ(150px);
+}
+input[id='cabbage']:checked ~ .gallery label[for='carrot'] {
+  transform: rotate3d(0, -1, 0, 20deg);
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery label[for='garlic'],
+input[id='carrot']:checked ~ .gallery label[for='garlic'] {
+  transform: rotate3d(0, -1, 0, 25deg);
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery label[for='pepper'],
+input[id='carrot']:checked ~ .gallery label[for='pepper'],
+input[id='garlic']:checked ~ .gallery label[for='pepper'] {
+  transform: rotate3d(0, -1, 0, 30deg);
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery label[for='potato'],
+input[id='carrot']:checked ~ .gallery label[for='potato'],
+input[id='garlic']:checked ~ .gallery label[for='potato'],
+input[id='pepper']:checked ~ .gallery label[for='potato'] {
+  transform: rotate3d(0, -1, 0, 35deg);
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery label[for='tomato'],
+input[id='carrot']:checked ~ .gallery label[for='tomato'],
+input[id='garlic']:checked ~ .gallery label[for='tomato'],
+input[id='pepper']:checked ~ .gallery label[for='tomato'],
+input[id='potato']:checked ~ .gallery label[for='tomato'] {
+  transform: rotate3d(0, -1, 0, 30deg);
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery label[for='zucchini'],
+input[id='carrot']:checked ~ .gallery label[for='zucchini'],
+input[id='garlic']:checked ~ .gallery label[for='zucchini'],
+input[id='pepper']:checked ~ .gallery label[for='zucchini'],
+input[id='potato']:checked ~ .gallery label[for='zucchini'],
+input[id='tomato']:checked ~ .gallery label[for='zucchini'] {
+  transform: rotate3d(0, -1, 0, 20deg);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='cabbage']:checked ~ .gallery {
+  transform: translateX(22%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='carrot']:checked ~ .gallery {
+  transform: translateX(16%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='garlic']:checked ~ .gallery {
+  transform: translateX(8%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='pepper']:checked ~ .gallery {
+  transform: translateX(0);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='potato']:checked ~ .gallery {
+  transform: translateX(-8%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='tomato']:checked ~ .gallery {
+  transform: translateX(-16%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[id='zucchini']:checked ~ .gallery {
+  transform: translateX(-22%);
+  transform-origin: center center;
+  transition-duration: 2s;
+}
+input[name="vegetable"]:nth-of-type(1):checked ~ .gallery label:nth-of-type(1):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(2):checked ~ .gallery label:nth-of-type(2):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(3):checked ~ .gallery label:nth-of-type(3):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(4):checked ~ .gallery label:nth-of-type(4):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(5):checked ~ .gallery label:nth-of-type(5):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(6):checked ~ .gallery label:nth-of-type(6):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(7):checked ~ .gallery label:nth-of-type(7):hover img {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(1) ~ .gallery label:nth-of-type(1) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(2) ~ .gallery label:nth-of-type(2) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(3) ~ .gallery label:nth-of-type(3) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(4) ~ .gallery label:nth-of-type(4) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(5) ~ .gallery label:nth-of-type(5) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(6) ~ .gallery label:nth-of-type(6) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(7) ~ .gallery label:nth-of-type(7) label[for*='open'] {
+  animation-name: recipeLabel;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+input[name="vegetable"]:nth-of-type(1):checked ~ .gallery label:nth-of-type(1):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(2):checked ~ .gallery label:nth-of-type(2):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(3):checked ~ .gallery label:nth-of-type(3):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(4):checked ~ .gallery label:nth-of-type(4):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(5):checked ~ .gallery label:nth-of-type(5):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(6):checked ~ .gallery label:nth-of-type(6):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[name="vegetable"]:nth-of-type(7):checked ~ .gallery label:nth-of-type(7):hover > label {
+  content: 'Рецепт';
+  font-size: 20px;
+  width: 90%;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  animation-name: showHeader;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  padding: 55px;
+  top: 51px;
+  left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(1) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(2) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(3) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(4) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(5) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(6) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id="open_"+$veg]:checked ~ .gallery label:nth-of-type(7) {
+  animation-name: showRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+input[id='open_1']:checked ~ .gallery .gallery__overlay,
+input[id='open_2']:checked ~ .gallery .gallery__overlay,
+input[id='open_3']:checked ~ .gallery .gallery__overlay,
+input[id='open_4']:checked ~ .gallery .gallery__overlay,
+input[id='open_5']:checked ~ .gallery .gallery__overlay,
+input[id='open_6']:checked ~ .gallery .gallery__overlay,
+input[id='open_7']:checked ~ .gallery .gallery__overlay {
+  width: 300%;
+  height: 100%;
+  display: inline-block;
+  background: #000;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 0;
+  transform: translateZ(200px);
+  transition-property: background;
+  transition-duration: 2s;
+}
+input[id='close_1']:checked ~ .gallery .gallery__overlay,
+input[id='close_2']:checked ~ .gallery .gallery__overlay,
+input[id='close_3']:checked ~ .gallery .gallery__overlay,
+input[id='close_4']:checked ~ .gallery .gallery__overlay,
+input[id='close_5']:checked ~ .gallery .gallery__overlay,
+input[id='close_6']:checked ~ .gallery .gallery__overlay,
+input[id='close_7']:checked ~ .gallery .gallery__overlay {
+  animation-name: closeOverlay;
+  animation-duration: 2s;
+}
+input[id='close_1']:checked ~ .gallery label[for='cabbage'],
+input[id='close_2']:checked ~ .gallery label[for='carrot'],
+input[id='close_3']:checked ~ .gallery label[for='garlic'],
+input[id='close_4']:checked ~ .gallery label[for='pepper'],
+input[id='close_5']:checked ~ .gallery label[for='potato'],
+input[id='close_6']:checked ~ .gallery label[for='tomato'],
+input[id='close_7']:checked ~ .gallery label[for='zucchini'] {
+  animation-name: closeRecipe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
+@-moz-keyframes recipeLabel {
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+  }
+}
+@-webkit-keyframes recipeLabel {
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+  }
+}
+@-o-keyframes recipeLabel {
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+  }
+}
+@keyframes recipeLabel {
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+  }
+}
+@-moz-keyframes showHeader {
+  0% {
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  75% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+}
+@-webkit-keyframes showHeader {
+  0% {
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  75% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+}
+@-o-keyframes showHeader {
+  0% {
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  75% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+}
+@keyframes showHeader {
+  0% {
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  75% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+  100% {
+    opacity: 0.8;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    transform: translateZ(2px);
+    border: 5px solid #fff;
+  }
+}
+@-moz-keyframes showRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@-webkit-keyframes showRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@-o-keyframes showRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@keyframes showRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@-moz-keyframes closeOverlay {
+  0% {
+    width: 300%;
+    height: 100%;
+    display: inline-block;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 0;
+    transform: translateZ(200px);
+    transition-property: background;
+    transition-duration: 2s;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateZ(200px);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes closeOverlay {
+  0% {
+    width: 300%;
+    height: 100%;
+    display: inline-block;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 0;
+    transform: translateZ(200px);
+    transition-property: background;
+    transition-duration: 2s;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateZ(200px);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@-o-keyframes closeOverlay {
+  0% {
+    width: 300%;
+    height: 100%;
+    display: inline-block;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 0;
+    transform: translateZ(200px);
+    transition-property: background;
+    transition-duration: 2s;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateZ(200px);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes closeOverlay {
+  0% {
+    width: 300%;
+    height: 100%;
+    display: inline-block;
+    background: #000;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 0;
+    transform: translateZ(200px);
+    transition-property: background;
+    transition-duration: 2s;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateZ(200px);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@-moz-keyframes closeRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@-webkit-keyframes closeRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@-o-keyframes closeRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
+@keyframes closeRecipe {
+  20% {
+    transform: translateY(-200px) translateZ(300px);
+  }
+  50%, 100% {
+    width: 500px;
+    transform: translateY(-200px) translateZ(300px) scale(1.1, 1.1) rotateX(180deg) translateY(-150px);
+  }
+}
